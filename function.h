@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdexcept>
+#include <random>
 
 using std::cout;
 using std::cin;
@@ -14,4 +15,14 @@ void EnterSize(int32_t& n){
 }
 void AllocationArray(double*& arr,int32_t n){
     arr = new double[n];
+}
+void FillArray(double* arr,int32_t n){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<double> dist(0,n);
+    for (int32_t i = 0;i < n;++i){
+        arr[i] = dist(gen);
+    }
+    
+
 }

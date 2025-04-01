@@ -12,6 +12,7 @@ int main(){
     try{
         EnterSize(n);
         AllocationArray(arr,n);
+        FillArray(arr,n);
     }
     catch(const char* e){
         cout << e;
