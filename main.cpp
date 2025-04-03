@@ -25,6 +25,7 @@ int main(){
         InputModularNumber(x);
         CompressionArray(arr,n,x);
         OutputCompressArray(arr,n);
+        FreeMemory(arr);
     }
     catch(const char* e){
         cout << e;

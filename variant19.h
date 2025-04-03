@@ -49,16 +49,16 @@ void InputModularNumber(double& x){
 
 }
 void  CompressionArray(double* arr,int32_t n,double x){
-    double temp = fabs(x);
+   
     int32_t counter = 0;
     for (int32_t i = 0;i < n;++i){
-        if (fabs(arr[i]) >= temp){
+        if (fabs(arr[i]) >= fabs(x)){
             arr[i] = arr[counter];
             counter++;
         }
     }
     for (int32_t i = counter;i < n;++i){
-        if (fabs(arr[i]) < temp){
+        if (fabs(arr[i]) < fabs(x)){
             arr[i] = 0;
         }
     }
@@ -67,4 +67,8 @@ void OutputCompressArray(double* arr,int32_t n){
     for (int32_t i = 0;i < n;++i){
         cout << '\n' << arr[i];
     }
+}
+void FreeMemory(double* arr){
+    delete[] arr;
+    arr = nullptr;
 }

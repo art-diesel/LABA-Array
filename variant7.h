@@ -40,8 +40,8 @@ int32_t CheckQuantity(double* arr,int32_t n,double temp){
         if(arr[i] == temp){
             counter++;
         }
-        return counter;
     }
+    return counter;
 }
 void SortArray(double* arr,int32_t n){
     for (int32_t i = 0;i < n - 1;++i){
