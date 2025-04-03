@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <random>
+#include <cmath>
 
 using std::cout;
 using std::cin;
@@ -61,4 +62,14 @@ void OutputArray(double* arr,int32_t n){
     for (int32_t i = 0;i < n;++i){
         cout << '\n' << arr[i];
     }
+}
+double MaxMinElements(double* arr,int32_t n){
+    double max{};
+    for (int32_t i = 0;i < n;++i){
+        max = arr[0];
+        if (fabs(max) < fabs(arr[i])){
+            max = arr[i];
+        }
+    }
+    return max;
 }

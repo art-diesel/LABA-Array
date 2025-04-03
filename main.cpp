@@ -15,6 +15,7 @@ int main(){
         FillArray(arr,n);
         SortArray(arr,n);
         OutputArray(arr,n);
+        cout << '\n' << "Max modular element:" << MaxMinElements(arr,n);
     }
     catch(const char* e){
         cout << e;
