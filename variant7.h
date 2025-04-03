@@ -73,7 +73,7 @@ double MaxMinElements(double* arr,int32_t n){
     }
     return max;
 }
-double SumElements(double* arr,int32_t n){
+double SumBetweenPositivElements(double* arr,int32_t n){
     int32_t first{};
     int32_t second{};
 
