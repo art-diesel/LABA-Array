@@ -73,3 +73,27 @@ double MaxMinElements(double* arr,int32_t n){
     }
     return max;
 }
+double SumElements(double* arr,int32_t n){
+    int32_t first{};
+    int32_t second{};
+
+    double sum{};
+    for (int32_t i = 0;i < n;++i){
+        
+        if (arr[i] > 0){
+            first = i;
+            break;
+        }
+    }
+    for (int32_t i =first + 1;i < n;++i){
+        if (arr[i] > 0){
+            second = i;
+            break;
+        }
+     }
+    for (int32_t i = first + 1;i < second;++i){
+            sum += arr[i];
+    }
+    
+    return sum;
+}

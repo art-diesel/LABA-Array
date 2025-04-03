@@ -16,6 +16,7 @@ int main(){
         SortArray(arr,n);
         OutputArray(arr,n);
         cout << '\n' << "Max modular element:" << MaxMinElements(arr,n);
+        cout << '\n' << "Sum elements = " << SumElements(arr,n);
     }
     catch(const char* e){
         cout << e;
