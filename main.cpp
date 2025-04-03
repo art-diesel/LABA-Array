@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdexcept>
-#include "function.h"
+#include "variant7.h"
+#include "variant19.h"
 
 using std::cout;
 using std::cin;
@@ -17,6 +18,7 @@ int main(){
         OutputArray(arr,n);
         cout << '\n' << "Max modular element:" << MaxMinElements(arr,n);
         cout << '\n' << "Sum elements = " << SumElements(arr,n);
+        cout << '\n' << "Number of positiv elements:" << PositivElements(arr,n);
     }
     catch(const char* e){
         cout << e;
