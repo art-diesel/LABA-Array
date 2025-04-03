@@ -13,6 +13,8 @@ int main(){
         EnterSize(n);
         AllocationArray(arr,n);
         FillArray(arr,n);
+        SortArray(arr,n);
+        OutputArray(arr,n);
     }
     catch(const char* e){
         cout << e;
