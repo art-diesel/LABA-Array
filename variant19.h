@@ -52,15 +52,15 @@ void  CompressionArray(double* arr,int32_t n,double x){
    
     int32_t counter = 0;
     for (int32_t i = 0;i < n;++i){
-        if (fabs(arr[i]) >= fabs(x)){
-            arr[i] = arr[counter];
+        if (std::fabs(arr[i]) >= x){
+            arr[counter] = arr[i];
             counter++;
         }
+        
+        
     }
     for (int32_t i = counter;i < n;++i){
-        if (fabs(arr[i]) < fabs(x)){
-            arr[i] = 0;
-        }
+          arr[i] = 0.0;
     }
 }
 void OutputCompressArray(double* arr,int32_t n){

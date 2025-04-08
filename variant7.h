@@ -51,7 +51,7 @@ void SortArray(double* arr,int32_t n){
             if(a < b){
                 std::swap(arr[k],arr[k + 1]);
             }
-            else if (a < b && arr[k] < arr[k + 1]){
+            else if (a < b || arr[k] < arr[k + 1]){
                 std::swap(arr[k],arr[k + 1]);
             }
         }
@@ -64,10 +64,10 @@ void OutputArray(double* arr,int32_t n){
     }
 }
 double MaxMinElements(double* arr,int32_t n){
-    double max{};
+    
+    double max = arr[0];
     for (int32_t i = 0;i < n;++i){
-        max = arr[0];
-        if (fabs(max) < fabs(arr[i])){
+        if (std::fabs(max) < std::fabs(arr[i])){
             max = arr[i];
         }
     }
@@ -93,6 +93,9 @@ double SumBetweenPositivElements(double* arr,int32_t n){
      }
     for (int32_t i = first + 1;i < second;++i){
             sum += arr[i];
+            if (first == second){
+                return 0;
+            }
     }
     
     return sum;
